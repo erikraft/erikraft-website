@@ -7,20 +7,27 @@ const {
 //tweak the `[--footer-height:${x}]` classes inside of footer component
 ---
 
-<footer class:list={[
-    classProp,
-    "[--footer-height:6] h-[calc(var(--block-size)*var(--footer-height))] xs:[--footer-height:5] sm:[--footer-height:4] md:[--footer-height:3] w-full bg-block-bedrock"
-]}>
-    <div class="flex flex-col sm:flex-row items-center justify-between h-full p-5 bg-dark-75 text-white">
-        <header class="flex flex-col gap-3 w-full sm:w-[60%]">
-            <img src="/imgs/project-logo.png" class="h-full max-w-[30ch] m-[-14px]" />
-            <p class="text-sm">Show off your server, document your projects, build with blocks, display items and paintings, create game like GUIs, and tons more! This is the Minecraft Theme for Astro</p>
-        </header>
-        <nav class="self-end flex flex-col items-end gap-1 text-link">
-            <a href="https://github.com/BryceRussell/astro-minecraft-theme" class="link">Download</a>
-            <a href="https://github.com/BryceRussell" class="link">Github</a>
-            <a href="https://astro.build" class="link">Astro</a>
-            <a href="https://discord.com/invite/grF4GTXXYm" class="link">Discord</a>
-        </nav>
+<footer
+    class:list={[
+        classProp,
+        "[--footer-height:3] h-[calc(var(--block-size)*var(--footer-height))] md:[--footer-height:2] w-full bg-block-dirt"
+    ]}
+>
+    <div class="h-full w-full bg-block-grass-side bg-repeat-x">
+        <div class="flex flex-col md:flex-row items-center justify-between h-full w-full p-5 bg-cover bg-gradient-to-t from-[rgba(0,0,0,0.75)] to-[rgba(0,0,0,0.25)]">
+            <div class="flex items-center gap-5 mb-4 md:mb-0">
+                <div class="text-white text-2xl md:text-3xl font-bold">ERIKRAFT</div>
+                <div>
+                    <h3 class="text-white text-xl md:text-2xl">Site Oficial</h3>
+                    <p class="text-gray-400 text-sm md:text-base"> 2024 Erikraft - Todos os direitos reservados</p>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row gap-3 md:gap-5 text-white text-sm md:text-base">
+                <a href="/redes-sociais">Redes Sociais</a>
+                <a href="mailto:contact2@erikraft.com">Contato</a>
+                <a href="https://ko-fi.com/erikraft" target="_blank">Doação</a>
+                <a href="/mais">Mais</a>
+            </div>
+        </div>
     </div>
 </footer>

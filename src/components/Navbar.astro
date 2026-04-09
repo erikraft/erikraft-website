@@ -12,12 +12,30 @@ const {
 >
     <div class="h-full w-full bg-block-grass-side bg-repeat-x">
         <div class="flex flex-col md:flex-row items-center justify-end h-full w-full p-5 pt-0 md:pb-0 bg-cover bg-gradient-to-t from-[rgba(0,0,0,0.75)] to-[rgba(0,0,0,0.25)]">
-            <a href="/" class="h-auto w-6-block md:w-9-block mx-auto md:ml-0"><img src="/imgs/project-logo.png" alt="logo" class=""/></a>
-            <nav class="flex items-center justify-end w-full md:w-min gap-3 text-2xl text-white">
+            <div class="text-white text-2xl md:text-3xl font-bold mx-auto md:ml-0">ERIKRAFT</div>
+            <div class="text-white text-sm md:text-base mx-auto md:ml-0">Site Oficial</div>
+            <nav class="flex flex-col md:flex-row items-start md:items-center justify-end w-full md:w-min gap-2 md:gap-3 text-lg md:text-xl text-white mt-2 md:mt-0">
                 <slot />
-                <a href="/" class="hover:underline">Home</a>
-                <a href="/docs" class="hover:underline">Docs</a>
-                <a href="https://github.com/BryceRussell/astro-minecraft-theme" class="button py-1 px-2 text-lg" target="_blank">Github</a>
+                <a href="/" class="hover:underline">Início</a>
+                <div class="flex flex-col md:hidden">
+                    <span class="text-gray-400">Diversos</span>
+                    <div class="ml-4">
+                        <a href="/redes-sociais" class="hover:underline block">Redes Sociais</a>
+                        <a href="https://search.erikraft.com/" class="hover:underline block" target="_blank">iSearch</a>
+                        <a href="/mods" class="hover:underline block">Mods</a>
+                        <a href="/music" class="hover:underline block">Music</a>
+                    </div>
+                </div>
+                <div class="hidden md:flex gap-3">
+                    <span class="text-gray-400">Diversos</span>
+                    <a href="/redes-sociais" class="hover:underline">Redes Sociais</a>
+                    <a href="https://search.erikraft.com/" class="hover:underline" target="_blank">iSearch</a>
+                    <a href="/mods" class="hover:underline">Mods</a>
+                    <a href="/music" class="hover:underline">Music</a>
+                </div>
+                <a href="/mais" class="hover:underline">Mais</a>
+                <a href="mailto:contact2@erikraft.com" class="hover:underline">Contato</a>
+                <a href="https://ko-fi.com/erikraft" class="hover:underline" target="_blank">Doação</a>
             </nav>
         </div>
     </div>

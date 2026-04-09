@@ -1,41 +1,205 @@
 ---
 import Base from "~/layouts/Base.astro";
-
-const item_files = await Astro.glob(`../../public/imgs/items/*`)
-const painting_files = await Astro.glob(`../../public/imgs/paintings/*`)
-
-const items = item_files.map(file => {
-    return file.default.split('/').pop().split('.')[0]
-});
-
-const paintings = painting_files.map(file => {
-    return file.default.split('/').pop().split('.')[0]
-});
 ---
 
 <Base>
-<div class="flex flex-col justify-center w-full sm:w-[90%] md:w-[80%] lg:w-[70%] mx-auto gap-5 py-5 px-2 markdown">
-    <h3 class=" underline text-2xl sm:text-4xl text-white">Astro Minecraft Theme</h3>
-    <p class="indent-5 text-white">
-        Show off your server, document your projects, build with blocks, display items and paintings, create game like GUIs, and tons more! This is a complete Minecraft theme with a documentation template built using Astro and Tailwindcss.
-        Check out the <a href="/docs" class="text-link hover:underline">docs</a> page for more information on how to use the theme and its features
-    </p>
-    <h3 class="text-center  underline text-4xl text-white">Features</h3>
-    <div class="flex items-center justify-center">
-        <ul>
-            <li>Display over 200+ items</li>
-            <li>Build with 100+ blocks</li>
-            <li>Repeating block backgrounds</li>
-            <li>All 25 paintings</li>
-            <li>Block based units/sizes</li>
-            <li>Create GUIs using panels, slots, and buttons</li>
-            <li>Misc UIs like maps, books, signs, and more</li>
-            <li>Minecraft typography using the Minecraft's font, text colors, and text shadows</li>
-            <li>75+ Minecraft themed colors</li>
-            <li>Markdown theme</li>
-            <li>Documentation system</li>
-        </ul>
+<div class="flex flex-col justify-center w-full sm:w-[90%] md:w-[80%] lg:w-[70%] mx-auto gap-8 py-8 px-4">
+    
+    <!-- Header Section -->
+    <div class="text-center">
+        <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">ERIKRAFT</h1>
+        <p class="text-xl md:text-2xl text-gray-300">Site Oficial</p>
     </div>
-    <a href="/docs" class="self-center py-2 px-5 my-5 button text-shadow-lg text-2xl">Get started</a>
+
+    <!-- Redes Sociais Section -->
+    <section class="bg-block-stone p-6 rounded-lg">
+        <h2 class="text-2xl md:text-3xl font-bold text-white mb-6 text-center">Redes Sociais</h2>
+        <div class="mp-social-wrapper">
+            <a class="mp-button" href="https://www.youtube.com/channel/UCqxLYHQxa--vQnaUiuZRubw" target="_blank">
+                <img src="/icons/youtube.svg" alt="YouTube">
+            </a>
+            <a class="mp-button" href="https://www.youtube.com/@ErikrafT" target="_blank">
+                <img src="/icons/youtube.svg" alt="YouTube">
+            </a>
+            <a class="mp-button" href="https://www.instagram.com/erikraft.yt/" target="_blank">
+                <img src="/icons/instagram.svg" alt="Instagram">
+            </a>
+            <a class="mp-button" href="https://tiktok.com/@erikraft.yt" target="_blank">
+                <img src="/icons/tiktok.svg" alt="TikTok">
+            </a>
+            <a class="mp-button" href="https://www.facebook.com/ErikrafTyt" target="_blank">
+                <img src="/icons/facebook.svg" alt="Facebook">
+            </a>
+            <a class="mp-button" href="https://www.threads.net/@erikraft.yt" target="_blank">
+                <img src="/icons/threads.svg" alt="Threads">
+            </a>
+            <a class="mp-button" href="https://bsky.app/profile/erikraft.com" target="_blank">
+                <img src="/icons/bluesky.svg" alt="Bluesky">
+            </a>
+            <a class="mp-button" href="https://x.com/ErikrafTbr" target="_blank">
+                <img src="/icons/twitter.svg" alt="X/Twitter">
+            </a>
+            <a class="mp-button" href="https://www.twitch.tv/erikraft_live/" target="_blank">
+                <img src="/icons/twitch.svg" alt="Twitch">
+            </a>
+            <a class="mp-button" href="https://mastodon.social/@ErikrafT" target="_blank">
+                <img src="/icons/mastodon.svg" alt="Mastodon">
+            </a>
+            <a class="mp-button" href="https://discord.com/servers/vamos-jogar-minecraft-1121464803941171270" target="_blank">
+                <img src="/icons/discord.svg" alt="Discord">
+            </a>
+            <a class="mp-button" href="https://www.reddit.com/r/ErikrafT/" target="_blank">
+                <img src="/icons/reddit.svg" alt="Reddit">
+            </a>
+            <a class="mp-button" href="https://br.pinterest.com/erikraft_youtuber/" target="_blank">
+                <img src="/icons/pinterest.svg" alt="Pinterest">
+            </a>
+            <a class="mp-button" href="https://www.behance.net/erikraft" target="_blank">
+                <img src="/icons/behance.svg" alt="Behance">
+            </a>
+            <a class="mp-button" href="https://github.com/erikraft" target="_blank">
+                <img src="/icons/github.svg" alt="GitHub">
+            </a>
+            <a class="mp-button" href="https://github.com/ErikrafTorg" target="_blank">
+                <img src="/icons/github.svg" alt="GitHub">
+            </a>
+            <a class="mp-button" href="https://codepen.io/ErikrafT" target="_blank">
+                <img src="/icons/codepen.svg" alt="CodePen">
+            </a>
+            <a class="mp-button" href="https://g.dev/erikraft" target="_blank">
+                <img src="/icons/google.svg" alt="Google Dev">
+            </a>
+            <a class="mp-button" href="https://poe.com/erikraft" target="_blank">
+                <img src="/icons/poe.svg" alt="Poe">
+            </a>
+            <a class="mp-button" href="https://open.skinpackmaker.com/user/@erikraft" target="_blank">
+                <img src="/icons/minecraft.svg" alt="Skin Pack Maker">
+            </a>
+            <a class="mp-button" href="https://sticker.ly/user/erikraft" target="_blank">
+                <img src="/icons/sticker.svg" alt="Sticker.ly">
+            </a>
+            <a class="mp-button" href="https://fish.audio/pt/u/9ac3fda8e6304df69ec48231575f895a/" target="_blank">
+                <img src="/icons/audio.svg" alt="Fish Audio">
+            </a>
+            <a class="mp-button" href="https://www.planetminecraft.com/member/erikraft/" target="_blank">
+                <img src="/icons/minecraft.svg" alt="Planet Minecraft">
+            </a>
+            <a class="mp-button" href="https://modrinth.com/user/ErikrafT" target="_blank">
+                <img src="/icons/modrinth.svg" alt="Modrinth">
+            </a>
+            <a class="mp-button" href="https://legacy.curseforge.com/members/erikraft/projects" target="_blank">
+                <img src="/icons/curseforge.svg" alt="CurseForge">
+            </a>
+            <a class="mp-button" href="https://pt.minecraft.wiki/w/Usuário:ErikrafT.ofc" target="_blank">
+                <img src="/icons/minecraft.svg" alt="Minecraft Wiki">
+            </a>
+            <a class="mp-button" href="https://play.google.com/store/apps/dev?id=7225435109089494480" target="_blank">
+                <img src="/icons/google-play.svg" alt="Google Play">
+            </a>
+        </div>
+    </section>
+
+    <!-- IA do Erikraft Section -->
+    <section class="bg-block-stone p-6 rounded-lg">
+        <h2 class="text-2xl md:text-3xl font-bold text-white mb-6 text-center">IA</h2>
+        <div class="mp-social-wrapper">
+            <a class="mp-button" href="https://aistudio.instagram.com/ai/630197026534195/?utm_source=share" target="_blank">
+                <img src="/icons/instagram.svg" alt="Instagram AI">
+            </a>
+            <a class="mp-button" href="https://m.me/1829208877836886?is_ai=1" target="_blank">
+                <img src="/icons/messenger.svg" alt="Messenger AI">
+            </a>
+            <a class="mp-button" href="https://poe.com/CraftAI_ofc" target="_blank">
+                <img src="/icons/poe.svg" alt="Poe AI">
+            </a>
+        </div>
+    </section>
+
+    <!-- Music Section -->
+    <section class="bg-block-stone p-6 rounded-lg">
+        <h2 class="text-2xl md:text-3xl font-bold text-white mb-6 text-center">Music</h2>
+        <div class="mp-social-wrapper">
+            <a class="mp-button" href="https://open.spotify.com/intl-pt/artist/6HMUpGHmc1NwUB5rrCwbTH" target="_blank">
+                <img src="/icons/spotify.svg" alt="Spotify">
+            </a>
+            <a class="mp-button" href="https://soundcloud.com/erikraft" target="_blank">
+                <img src="/icons/soundcloud.svg" alt="SoundCloud">
+            </a>
+            <a class="mp-button" href="https://www.deezer.com/br/artist/303475291" target="_blank">
+                <img src="/icons/deezer.svg" alt="Deezer">
+            </a>
+            <a class="mp-button" href="https://music.amazon.com.br/artists/B0DXHRQ119/erikraft" target="_blank">
+                <img src="/icons/amazon.svg" alt="Amazon Music">
+            </a>
+            <a class="mp-button" href="https://music.apple.com/br/artist/erikraft/1796917075" target="_blank">
+                <img src="/icons/apple.svg" alt="Apple Music">
+            </a>
+        </div>
+    </section>
+
+    <!-- Mods Section -->
+    <section class="bg-block-stone p-6 rounded-lg">
+        <h2 class="text-2xl md:text-3xl font-bold text-white mb-6 text-center">Mods</h2>
+        <div class="mp-social-wrapper">
+            <a class="mp-button" href="https://modrinth.com/user/ErikrafT" target="_blank">
+                <img src="/icons/modrinth.svg" alt="Modrinth">
+            </a>
+            <a class="mp-button" href="https://www.planetminecraft.com/member/erikraft/" target="_blank">
+                <img src="/icons/minecraft.svg" alt="Planet Minecraft">
+            </a>
+            <a class="mp-button" href="https://www.curseforge.com/members/erikraft/projects" target="_blank">
+                <img src="/icons/curseforge.svg" alt="CurseForge">
+            </a>
+        </div>
+    </section>
+
+    <!-- Discord Widget Section -->
+    <section class="bg-block-stone p-6 rounded-lg">
+        <h2 class="text-2xl md:text-3xl font-bold text-white mb-6 text-center">Discord</h2>
+        <div class="flex justify-center">
+            <iframe src="https://discord.com/widget?id=1121464803941171270&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0"></iframe>
+        </div>
+    </section>
+
 </div>
+
+<style>
+.mp-social-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.mp-button {
+  width: 60px;
+  height: 60px;
+  border: 2px solid #242424;
+  background: #48494a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-decoration: none;
+  transition: transform 0.1s ease;
+}
+
+.mp-button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  box-shadow: inset rgba(0,0,0,0.25) 0 -6px 0;
+}
+
+.mp-button:active {
+  transform: translateY(6px);
+}
+
+.mp-button img {
+  width: 60%;
+  height: 60%;
+  image-rendering: pixelated;
+  filter: invert(1);
+}
+</style>
 </Base>
